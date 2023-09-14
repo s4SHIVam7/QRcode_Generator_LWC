@@ -1,0 +1,17 @@
+<template>
+    <div class="slds-border_left slds-border_right">
+        <lightning-card title="QR Code Generator " icon-name="utility:scan">
+            <div>
+                <lightning-input label="Enter something here" data-id="inputField1" onchange={inputChange}> </lightning-input>
+                <lightning-button variant="brand" label="Generate QR Code" title="Generate QR Code" onclick={letterHandler}> </lightning-button>
+            </div>
+            
+        </lightning-card>
+        
+        <div>
+            <template if:true={value}>
+                    <img src={img_url} >
+            </template>
+        </div>
+    </div>
+</template>
